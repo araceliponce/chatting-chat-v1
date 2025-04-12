@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.chat {
+  display: grid;
+
+  &__list {
+    padding-top: var(--h-header, 5rem);
+    padding-inline: 1.7rem;
+    padding-bottom: var(--h-footer, 6rem);
+
+
+  }
+
+  &__subtitle {
+    min-width: 12ch;
+    background: var(--bg-avatar-default);
+    width: fit-content;
+    text-align: center;
+    margin-inline: auto;
+    border-radius: 100vh;
+    padding: .5rem 1rem;
+    opacity: .7;
+    font-weight: bold;
+    font-size: .9em;
+  }
+
+  &__type {
+    display: grid;
+    gap: 1rem;
+    // max-width: 20rem;
+    margin-inline-start: auto;
+
+
+    background-color: Canvas;
+    border-radius: .5rem;
+    padding: 1rem 1rem;
+    position: fixed;
+    bottom: 0;
+    inset-inline: 0;
+    height: fit-content;
+  }
+
+  &__type input {
+    padding-right: 6rem;
+
+    @media screen and (min-width: 40rem) {
+      padding-right: 23ch;
+    }
+  }
+}
+
+
+input {
+  width: 100%;
+}
+
+.msg__wrapper {
+  max-width: 20rem;
+  max-width: min(15rem, 90%);
+  word-break: break-word;
+}
+
+
+.msg__text {
+  background-color: var(--bg-msg-default);
+  // border-radius: 1rem;
+  padding: .8rem 1rem;
+  border-radius: 1rem 1rem 1rem .2rem;
+}
+
+//sentido del reloj, desde arriba izq
+.mine {
+  margin-inline-start: auto;
+
+  & .msg__text {
+    border-radius: 1rem 1rem .2rem 1rem;
+    background-color: var(--bg-msg-mine);
+  }
+}
